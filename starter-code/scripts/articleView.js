@@ -96,13 +96,12 @@ articleView.create = function() {
     return 'Hooray! Code highlighting!';
   };
   ``` */
-  // $('pre code').each(function(i, block) {
-  //   hljs.highlightBlock(block);
-  // });
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
 
   // TODO: Export the new article as JSON, so it's ready to copy/paste into blogArticles.js:
   $('#export-field').fadeIn();
-  console.log('test');
   $('#article-json').val(JSON.stringify(formArticle) + ',');
 };
 
