@@ -17,6 +17,7 @@ Article.prototype.toHtml = function(scriptTemplateId) {
   }
   // TODO: Parse any markdown with marked!
 
+  this.body = marked(this.body);
   return template(this);
 };
 
